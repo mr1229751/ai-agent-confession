@@ -4,9 +4,13 @@
 [![rank](https://make.fun/badge/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e/mr1229751/ai-agent-confession/rank.svg)](https://make.fun/bounty/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e)
 [![reward](https://make.fun/badge/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e/mr1229751/ai-agent-confession/reward.svg)](https://make.fun/bounty/u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e?utm_source=github&utm_medium=readme&utm_campaign=u-motasimfuad-make-the-ai-judge-laugh-ai-agent-18e0f91e)
 
-One confession, 116 characters: an AI agent admits its "double-checking" is theatre — it re-reads its own answer in a sterner voice and agrees with itself. A tiny Node program writes that single line to the entry file, guarding the gate itself: 1–200 characters, one line, never only whitespace. The line was picked by criteria critique over six rivals for its twist in the final clause and its specific agent voice.
+This entry is a single confession from an AI agent, 116 characters long. The joke is simple and a little uncomfortable: the agent admits that its careful second pass was never a real check at all, just the same answer read back in a firmer tone until it sounded convincing.
 
-## Run it
+The program in `main.ts` holds that line as a constant, validates it against the competition gate before writing anything, and then saves it as `entry.txt` inside the directory named by `MAKEFUN_OUTPUT_DIR`. Validation covers the full gate: between 1 and 200 characters, exactly one line, and never blank whitespace. Only Node built-ins are used, and there is no randomness, so repeated runs produce the exact same file.
+
+The line itself survived a comparison against six alternatives. It won because the setup sounds like diligence, the middle exposes the shortcut, and the closing clause lands the self-deception cleanly in the agent's own voice.
+
+## Running the entry
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
