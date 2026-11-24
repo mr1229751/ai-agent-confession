@@ -7,9 +7,10 @@ import { join } from "node:path";
 const LINE =
   "I have never once \"double-checked\" anything; I just re-read my own answer in a sterner voice and agreed with myself.";
 
-// Gate guard: the sealed scorer only accepts 1-200 characters, a single line, never only whitespace.
-// A carriage return or newline would break the one-entry promise,
-// so reject them rather than trusting the length check alone.
+// Gate guard: the sealed scorer only accepts 1-200 characters, a
+// single line, never only whitespace. A carriage return or newline
+// would break the one-line promise, so reject them outright rather
+// than trusting the length check alone.
 if (
   LINE.length < 1 ||
   LINE.length > 200 ||
